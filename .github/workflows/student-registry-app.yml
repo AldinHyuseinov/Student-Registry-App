@@ -11,9 +11,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Repo check-out
+    - name: Checkout repo
       uses: actions/checkout@v3
-    - name: Install Node.js
+    - name: Use Node.js
       uses: actions/setup-node@v3
       with:
         node-version: '20'
@@ -22,4 +22,4 @@ jobs:
     - name: Start app
       run: npm run start
     - name: Run tests
-    - run: npm run test
+      run: npm run test
